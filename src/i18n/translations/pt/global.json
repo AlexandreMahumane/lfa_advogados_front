@@ -1,0 +1,77 @@
+{
+  "menu": "Como podemos ajudar?",
+  "menu-news": "Notícias",
+  "hero": {
+    "title": "Quem Nós Somos",
+    "link": "quem-somos",
+    "information": "A LFA Advogados é uma Sociedade de advogados moçambicana que presta aos seus Clientes serviços de alta qualidade nos diversos ramos do Direito. Tem prestado serviços de consultoria e assessoria jurídica, patrocínio e assistência jurídica a várias instituições. A LFA Advogados é uma sociedade de advogados moçambicana que oferece aos seus clientes serviços de elevada qualidade nos diversos ramos do Direito.",
+    "information1": "Os advogados da LFA são comprometidos com a satisfação das necessidades dos clientes, posicionando-se como parceiros em qualquer projeto realizado em Moçambique. Nossa equipa está preparada para apoiar tanto clientes moçambicanos quanto estrangeiros interessados em investir no país, em qualquer província, assim como empresas moçambicanas que queiram expandir seus investimentos no exterior.",
+    "information2": "Investimos continuamente na formação da nossa equipa, aprimorando tanto as competências técnicas quanto as habilidades pessoais, para garantir que nossos clientes recebam soluções jurídicas robustas e inovadoras.",
+    "var": "A ",
+    "var1": "LFA Advogados",
+    "text": "é uma Sociedade de advogados moçambicana que presta aos seus Clientes serviços de alta qualidade nos diversos ramos do Direito.",
+    "text2": "Tem prestado serviços de consultoria e assessoria jurídica, patrocínio e assistência jurídica a várias instituições."
+  },
+  "link": {
+    "text": "Saiba Maís"
+  },
+  "values": {
+    "title": "Valores",
+    "link": "valores",
+    "information": "Com base num rigoroso código ético, a LFA Advogados busca a excelência com vista a responder da forma mais eficiente às necessidades dos seus Clientes, apostando na prestação de serviços de qualidade com efectivo valor acrescentado. Na LFA Advogados, a excelência no atendimento aos nossos clientes é uma prioridade, guiada por um código ético rigoroso. Buscamos sempre responder de forma eficiente às necessidades dos nossos clientes, oferecendo serviços jurídicos de alta qualidade com verdadeiro valor agregado.",
+    "information1": "Valorizamos o desenvolvimento pessoal e profissional dos nossos advogados e investimos continuamente em tecnologia de ponta. Nossa visão é que a LFA Advogados se torne uma instituição duradoura, além dos sócios fundadores e dos membros atuais. A equipe da LFA Advogados dedica-se integralmente aos assuntos dos clientes, com um compromisso firme com rigor, responsabilidade e competência.",
+    "information2": "Nosso principal objetivo é promover uma cultura de meritocracia e colaboração eficaz. Buscamos fornecer serviços jurídicos excepcionais e soluções inovadoras que atendam às necessidades e expectativas dos nossos clientes. Para isso, investimos na formação contínua e especializada dos nossos advogados, tanto em Moçambique quanto no exterior.",
+
+    "text": "Com base num rigoroso código ético, a LFA Advogados busca a excelência com vista a responder da forma mais eficiente às necessidades dos seus Clientes, apostando na prestação de serviços de qualidade com efectivo valor acrescentado."
+  },
+  "team": {
+    "name": "equipa",
+    "title": "Equipa",
+    "text": "Em nosso escritório, contamos com uma equipe de advogados altamente qualificados e dedicados, comprometidos em oferecer o melhor serviço jurídico aos nossos clientes. Nossa equipe é composta por profissionais com ampla experiência em diversas áreas do direito, preparados para enfrentar desafios complexos e fornecer soluções eficazes."
+  },
+  "skills": {
+    "link": "areas-de-competencia",
+    "title": "Áreas de Actuação",
+    "text": "A LFA Advogados, Lda é um escritório de advogados que presta serviços de Consultoria e Assessoria Jurídica, Patrocínio Judicial, Assistência Jurídica em diversas matérias com maior enfoque para as seguintes áreas Direito Laboral, Direito Comercial, Direito Administrativo, Direito Criminal, Direito Fiscal, Direito Civil e Direito Processual conexo"
+  },
+  "contacts": {
+    "name": "contactos",
+    "title": "Contactos",
+    "adress": "Endereço",
+    "text": "Av. Ahmed Sekou Touré 1154 R/C, Bairro Polana Cimento A. Maputo - Moçambique"
+  },
+  "placeholders": {
+    "var1": "Nome",
+    "var2": "Email",
+    "var3": "Telefone",
+    "var4": "Digite sua mensagem aqui.",
+    "var5": "Enviar"
+  },
+  "article": {
+    "name": "noticia",
+    "title": "Ultímas Notícia",
+    "news": {
+      "id": 1,
+      "title": "LFA Advogados",
+      "image": "",
+      "text": "A LFA Advogados é uma Sociedade de advogados moçambicana que presta aos seus Clientes serviços de alta qualidade nos diversos ramos do Direito. Tem prestado serviços de consultoria e assessoria jurídica, patrocínio e assistência jurídica a várias instituições. A LFA Advogados é uma sociedade de advogados moçambicana que oferece aos seus clientes serviços de elevada qualidade nos diversos ramos do Direito."
+    }
+  },
+  "joinUs": {
+    "link": "junte-se-a-nos",
+    "title": "Junte-se a Nós",
+    "information": "Com base num rigoroso código ético, a LFA Advogados busca a excelência com vista a responder da forma mais eficiente às necessidades dos seus Clientes, apostando na prestação de serviços de qualidade com efectivo valor acrescentado. Na LFA Advogados, a excelência no atendimento aos nossos clientes é uma prioridade, guiada por um código ético rigoroso. Buscamos sempre responder de forma eficiente às necessidades dos nossos clientes, oferecendo serviços jurídicos de alta qualidade com verdadeiro valor agregado.",
+    "information1": "Valorizamos o desenvolvimento pessoal e profissional dos nossos advogados e investimos continuamente em tecnologia de ponta. Nossa visão é que a LFA Advogados se torne uma instituição duradoura, além dos sócios fundadores e dos membros atuais. A equipe da LFA Advogados dedica-se integralmente aos assuntos dos clientes, com um compromisso firme com rigor, responsabilidade e competência.",
+    "information2": "Nosso principal objetivo é promover uma cultura de meritocracia e colaboração eficaz. Buscamos fornecer serviços jurídicos excepcionais e soluções inovadoras que atendam às necessidades e expectativas dos nossos clientes. Para isso, investimos na formação contínua e especializada dos nossos advogados, tanto em Moçambique quanto no exterior.",
+
+    "text": ""
+  },
+  "notFound": {
+    "text1": "Página não encontrada",
+    "text2": "Desculpe, a página que você está procurando não existe.",
+    "text3": "Voltar à página inicial"
+  },
+  "footer": {
+    "text": "2024 FLA ADVOGADOS. Todos os direitos reservados"
+  }
+}
