@@ -1,4 +1,4 @@
-import photo from "../assets/hero.jpg";
+import photo from "../assets/photo5.jpeg";
 import { LinkComponent } from "./link-component";
 
 export const Card = ({ variant, path }) => {

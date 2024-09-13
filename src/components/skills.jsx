@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { TitleComponent } from "./title";
-import photo from "../assets/hero.jpg";
+import photo from "../assets/photo6.jpeg";
 import React from "react";
 import "../i18n/i18n";
 import { useTranslation } from "react-i18next";
