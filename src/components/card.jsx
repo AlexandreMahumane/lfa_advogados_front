@@ -1,10 +1,16 @@
 import photo from "../assets/photo5.jpeg";
 import { LinkComponent } from "./link-component";
-
+import { motion } from "framer-motion";
 export const Card = ({ variant, path }) => {
   const type = `${variant != "N" ? "px-0" : "px-3"}`;
   return (
-    <section className="p-4 h-fit w-72 border-b border-black">
+    <motion.section
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.65 }}
+      viewport={{ once: true }}
+      className="p-4 h-fit w-72 border-b border-black"
+    >
       <div className="h-56">
         <img src={photo} className="w-full object-cover h-full" alt="" />
       </div>
@@ -20,6 +26,6 @@ export const Card = ({ variant, path }) => {
         </p>
       </div>
       <LinkComponent path={path} />
-    </section>
+    </motion.section>
   );
 };

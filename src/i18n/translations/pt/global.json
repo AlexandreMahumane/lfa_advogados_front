@@ -10,7 +10,11 @@
     "var": "A ",
     "var1": "LFA Advogados",
     "text": "é uma Sociedade de advogados moçambicana que presta aos seus Clientes serviços de alta qualidade nos diversos ramos do Direito.",
-    "text2": "Tem prestado serviços de consultoria e assessoria jurídica, patrocínio e assistência jurídica a várias instituições."
+    "text2": "Tem prestado serviços de consultoria e assessoria jurídica, patrocínio e assistência jurídica a várias instituições.",
+    "mission": {
+      "title": "Missão",
+      "text": "Nossa missão é oferecer serviços jurídicos de excelência, com qualidade e dentro dos prazos, visando soluções práticas que atendam às necessidades dos nossos clientes. Actuamos sempre com lealdade, zelo, sigilo e confidencialidade, garantindo a máxima confiança e eficiência em cada processo."
+    }
   },
   "link": {
     "text": "Saiba Maís"
@@ -21,18 +25,82 @@
     "information": "Com base num rigoroso código ético, a LFA Advogados busca a excelência com vista a responder da forma mais eficiente às necessidades dos seus Clientes, apostando na prestação de serviços de qualidade com efectivo valor acrescentado. Na LFA Advogados, a excelência no atendimento aos nossos clientes é uma prioridade, guiada por um código ético rigoroso. Buscamos sempre responder de forma eficiente às necessidades dos nossos clientes, oferecendo serviços jurídicos de alta qualidade com verdadeiro valor agregado.",
     "information1": "Valorizamos o desenvolvimento pessoal e profissional dos nossos advogados e investimos continuamente em tecnologia de ponta. Nossa visão é que a LFA Advogados se torne uma instituição duradoura, além dos sócios fundadores e dos membros atuais. A equipe da LFA Advogados dedica-se integralmente aos assuntos dos clientes, com um compromisso firme com rigor, responsabilidade e competência.",
     "information2": "Nosso principal objetivo é promover uma cultura de meritocracia e colaboração eficaz. Buscamos fornecer serviços jurídicos excepcionais e soluções inovadoras que atendam às necessidades e expectativas dos nossos clientes. Para isso, investimos na formação contínua e especializada dos nossos advogados, tanto em Moçambique quanto no exterior.",
-
+    "value": "Excelência",
+    "text1": "Prestamos serviços com o mais alto nível de qualidade, buscando sempre superar as expectativas dos nossos clientes.",
+    "value2": "Lealdade",
+    "text2": "Actuamos com total comprometimento, sempre colocando os interesses dos nossos clientes em primeiro lugar.",
+    "value3": "Zelo",
+    "text3": "Cuidamos de cada caso com atenção e dedicação, assegurando soluções personalizadas e eficazes.",
+    "value4": "Sigilo e Confidencialidade",
+    "text4": "Garantimos discrição absoluta em todas as etapas, preservando a integridade e a confiança dos nossos clientes.",
+    "value5": "Ética",
+    "text5": "Nossas acções são guiadas por princípios sólidos, garantindo transparência e integridade em todas as relações.",
     "text": "Com base num rigoroso código ético, a LFA Advogados busca a excelência com vista a responder da forma mais eficiente às necessidades dos seus Clientes, apostando na prestação de serviços de qualidade com efectivo valor acrescentado."
   },
   "team": {
     "name": "equipa",
     "title": "Equipa",
-    "text": "Em nosso escritório, contamos com uma equipe de advogados altamente qualificados e dedicados, comprometidos em oferecer o melhor serviço jurídico aos nossos clientes. Nossa equipe é composta por profissionais com ampla experiência em diversas áreas do direito, preparados para enfrentar desafios complexos e fornecer soluções eficazes."
+    "text": "A LFA Advogados, Lda conta com uma equipe de Advogados Seniores, com mais de 5 anos de experiência em advocacia e mais de 10 anos em áreas como docência universitária, assessoria e consultoria jurídica. Além disso, nossos Advogados Estagiários, devidamente inscritos na Ordem dos Advogados, trazem mais de 5 anos de experiência em diversas áreas do Direito.",
+    "text1": "Com uma equipe altamente competente, dinâmica e comprometida, oferecemos serviços a uma ampla gama de clientes, tanto nacionais quanto internacionais, incluindo particulares e grandes multinacionais. Atendemos em português e inglês, oferecendo também tradução de documentos e serviços de intérprete e tradução simultânea em audiências e eventos."
+  },
+  "whyLfa": {
+    "title": "Por que Escolher a LFA Advogados?",
+    "value1": "Excelência e Qualidade",
+    "text1": "Oferecemos serviços jurídicos de alto nível, com soluções eficazes e personalizadas, sempre atendendo às necessidades específicas de cada cliente.",
+    "value2": "Atendimento Ágil e Eficiente",
+    "text2": "Priorizamos a entrega de resultados em tempo útil, garantindo que os clientes recebam respostas rápidas e acções assertivas.",
+    "value3": "Confiança e Sigilo",
+    "text3": "Actuamos com total lealdade e confidencialidade, garantindo discrição absoluta e uma relação de confiança em cada processo."
   },
   "skills": {
     "link": "areas-de-competencia",
     "title": "Áreas de Actuação",
-    "text": "A LFA Advogados, Lda é um escritório de advogados que presta serviços de Consultoria e Assessoria Jurídica, Patrocínio Judicial, Assistência Jurídica em diversas matérias com maior enfoque para as seguintes áreas Direito Laboral, Direito Comercial, Direito Administrativo, Direito Criminal, Direito Fiscal, Direito Civil e Direito Processual conexo"
+    "text": "A LFA Advogados, Lda é um escritório de advogados que presta serviços de Consultoria e Assessoria Jurídica, Patrocínio Judicial, Assistência Jurídica em diversas matérias com maior enfoque para as seguintes áreas Direito Laboral, Direito Comercial, Direito Administrativo, Direito Criminal, Direito Fiscal, Direito Civil e Direito Processual conexo",
+    "text2": "A LFA Advogados, Lda oferece serviços especializados nas seguintes áreas do Direito:",
+    "area1": {
+      "title": "Direito Laboral",
+      "description": "Elaboração de contratos, regulamentos internos, processos disciplinares, rescisões contratuais, higiene e segurança no trabalho, e cumprimento de obrigações fiscais e previdenciárias."
+    },
+    "area2": {
+      "title": "Direito Comercial",
+      "description": "Criação de sociedades, gestão de contratos, procurement de bens e serviços, e emissão de pareceres jurídicos."
+    },
+    "area3": {
+      "title": "Recuperação de Créditos",
+      "description": "Medidas para recuperação de créditos, desde interpelação extrajudicial até processos judiciais."
+    },
+    "area4": {
+      "title": "Direito Administrativo",
+      "description": "Elaboração e impugnação de atos administrativos, assessoria em contratos e fiscalização da contratação pública."
+    },
+    "area5": {
+      "title": "Contencioso (Direito Civil e Criminal)",
+      "description": "Patrocínio judicial em processos cíveis, criminais e administrativos, incluindo acompanhamento a audiências."
+    },
+    "area6": {
+      "title": "Direito Fiscal",
+      "description": "Consultoria tributária, planejamento fiscal, assistência para investimentos e recursos administrativos."
+    },
+    "area7": {
+      "title": "Reforma de Diplomas Legais",
+      "description": "Assistência na elaboração e reforma de legislações e regulamentos."
+    },
+    "area8": {
+      "title": "Comércio Internacional",
+      "description": "Assessoria em importação de bens e contratos internacionais."
+    },
+    "area9": {
+      "title": "Assessoria a Estrangeiros",
+      "description": "Regularização de residência e situação laboral de estrangeiros em Moçambique."
+    },
+    "area10": {
+      "title": "Imobiliário e Construção Civil",
+      "description": "Assessoria na compra, venda e licenciamento de imóveis e terrenos."
+    },
+    "area11": {
+      "title": "Formações Jurídicas",
+      "description": "Capacitações em matéria jurídico-legal para técnicos dos clientes, com formações de curta duração."
+    }
   },
   "contacts": {
     "name": "contactos",

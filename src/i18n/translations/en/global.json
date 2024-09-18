@@ -10,7 +10,12 @@
     "information2": "We continuously invest in the training of our team, enhancing both technical skills and personal abilities, to ensure that our clients receive robust and innovative legal solutions.",
     "var1": "LFA Lawyers",
     "text": "is a Mozambican law firm providing high-quality services in various areas of law.",
-    "text2": "We have provided consulting and legal advisory services, sponsorship, and legal assistance to several institutions."
+    "text2": "We have provided consulting and legal advisory services, sponsorship, and legal assistance to several institutions.",
+
+    "mission": {
+      "title": "Mission",
+      "text": "Our mission is to offer excellent legal services, with quality and within deadlines, aiming for practical solutions that meet our clients' needs. We always act with loyalty, diligence, discretion, and confidentiality, ensuring maximum trust and efficiency in every case."
+    }
   },
   "link": {
     "text": "Learn More"
@@ -21,17 +26,83 @@
     "information": "Based on a rigorous ethical code, LFA Advogados seeks excellence to efficiently meet the needs of its clients, focusing on providing high-quality services with real added value. At LFA Advogados, excellence in client service is a priority, guided by a strict ethical code. We always strive to respond efficiently to our clients' needs, offering high-quality legal services with true added value.",
     "information1": "We value the personal and professional development of our lawyers and continuously invest in cutting-edge technology. Our vision is for LFA Advogados to become a lasting institution beyond the founding partners and current members. The team at LFA Advogados is wholly dedicated to client matters with a firm commitment to rigor, responsibility, and competence.",
     "information2": "Our primary goal is to foster a culture of meritocracy and effective collaboration. We strive to provide exceptional legal services and innovative solutions that meet our clients' needs and expectations. To achieve this, we invest in the continuous and specialized training of our lawyers, both in Mozambique and abroad.",
-    "text": "Based on a strict ethical code, LFA Lawyers seeks excellence to efficiently meet the needs of its clients, focusing on delivering quality services with real added value."
+    "text": "Based on a strict ethical code, LFA Lawyers seeks excellence to efficiently meet the needs of its clients, focusing on delivering quality services with real added value.",
+    "value1": "Excellence",
+    "text1": "We provide services at the highest level of quality, always striving to exceed our clients' expectations.",
+    "value2": "Loyalty",
+    "text2": "We act with total commitment, always putting our clients' interests first.",
+    "value3": "Diligence",
+    "text3": "We handle each case with care and dedication, ensuring personalized and effective solutions.",
+    "value4": "Discretion and Confidentiality",
+    "text4": "We guarantee absolute discretion at every stage, preserving the integrity and trust of our clients.",
+    "value5": "Ethics",
+    "text5": "Our actions are guided by strong principles, ensuring transparency and integrity in all relationships."
+  },
+
+  "whyLfa": {
+    "title": "Why Choose LFA Advogados?",
+    "value1": "Excellence and Quality",
+    "text1": "We offer high-level legal services with effective and personalized solutions, always meeting the specific needs of each client.",
+    "value2": "Agile and Efficient Service",
+    "text2": "We prioritize delivering timely results, ensuring that clients receive quick responses and decisive actions.",
+    "value3": "Trust and Confidentiality",
+    "text3": "We act with complete loyalty and confidentiality, ensuring absolute discretion and a trusting relationship in every case."
   },
   "team": {
     "name": "team",
     "title": "Team",
-    "text": "In our office, we have a team of highly qualified and dedicated lawyers, committed to providing the best legal service to our clients. Our team consists of professionals with extensive experience in various areas of law, prepared to tackle complex challenges and provide effective solutions."
+    "text": "LFA Advogados, Lda has a team of Senior Lawyers with more than 5 years of experience in legal practice and over 10 years in areas such as university teaching, legal advisory, and consultancy. In addition, our Trainee Lawyers, duly registered with the Bar Association, bring more than 5 years of experience in various areas of law.",
+    "text1": "With a highly competent, dynamic, and dedicated team, we provide services to a wide range of clients, both national and international, including individuals and large multinational corporations. We operate in both Portuguese and English, also offering document translation services, as well as interpreter and simultaneous translation services during hearings and events."
   },
   "skills": {
     "link": "area-of-pratice",
     "title": "Areas of Practice",
-    "text": "LFA Lawyers, Ltd. is a law firm that provides consulting and legal advisory services, judicial sponsorship, and legal assistance in various matters, with a major focus on the following areas: Labor Law, Commercial Law, Administrative Law, Criminal Law, Tax Law, Civil Law, and related Procedural Law."
+    "text": "LFA Lawyers, Ltd. is a law firm that provides consulting and legal advisory services, judicial sponsorship, and legal assistance in various matters, with a major focus on the following areas: Labor Law, Commercial Law, Administrative Law, Criminal Law, Tax Law, Civil Law, and related Procedural Law.",
+    "text2": "LFA Advogados, Lda offers specialized services in the following areas of law:",
+    "area1": {
+      "title": "Labor Law",
+      "description": "Drafting of contracts, internal regulations, disciplinary procedures, contract terminations, occupational health and safety, and compliance with tax and social security obligations."
+    },
+    "area2": {
+      "title": "Commercial Law",
+      "description": "Company formation, contract management, procurement of goods and services, and issuing legal opinions."
+    },
+    "area3": {
+      "title": "Debt Recovery",
+      "description": "Measures for debt recovery, from extrajudicial demands to judicial proceedings."
+    },
+    "area4": {
+      "title": "Administrative Law",
+      "description": "Drafting and challenging administrative acts, advising on contracts, and overseeing public procurement."
+    },
+    "area5": {
+      "title": "Litigation (Civil and Criminal Law)",
+      "description": "Judicial representation in civil, criminal, and administrative cases, including attendance at hearings."
+    },
+    "area6": {
+      "title": "Tax Law",
+      "description": "Tax consultancy, tax planning, assistance with investments, and administrative appeals."
+    },
+    "area7": {
+      "title": "Legal Reforms",
+      "description": "Assistance in drafting and reforming laws and regulations."
+    },
+    "area8": {
+      "title": "International Trade",
+      "description": "Advisory on the importation of goods and international contracts."
+    },
+    "area9": {
+      "title": "Foreign Advisory",
+      "description": "Regularization of residence and employment status for foreigners in Mozambique."
+    },
+    "area10": {
+      "title": "Real Estate and Construction",
+      "description": "Advisory on the purchase, sale, and licensing of properties and land."
+    },
+    "area11": {
+      "title": "Legal Training",
+      "description": "Short-term legal training for client staff on legal matters."
+    }
   },
   "contacts": {
     "name": "contact",

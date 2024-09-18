@@ -6,6 +6,7 @@ import React from "react";
 import "../i18n/i18n";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+
 export const Team = () => {
   const { t } = useTranslation();
   const teamMembers = [
@@ -57,13 +58,24 @@ export const Team = () => {
 
       <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mt-8">
         {teamMembers.map((member, index) => (
-          <div key={index} className="flex  flex-col items-center">
+          <div
+            key={index}
+            className="relative group flex flex-col items-center"
+          >
             <Link to={"information/member/"}>
+              {/* Imagem do Advogado */}
               <img
                 src={member.photo}
                 alt={member.name}
-                className="w-32 h-32 object-cover rounded-full shadow-lg"
+                className="w-32 h-32 object-cover rounded-lg shadow-lg transition-opacity duration-300 group-hover:opacity-70"
               />
+
+              {/* Nome do Advogado sobre a imagem ao fazer hover */}
+              <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <span className="text-white text-lg font-semibold">
+                  {member.name}
+                </span>
+              </div>
             </Link>
           </div>
         ))}

@@ -6,7 +6,7 @@ import "../i18n/i18n";
 import "swiper/css";
 import photo1 from "../assets/photo5.jpeg";
 import photo2 from "../assets/photo4.jpeg";
-import photo3 from "../assets/photo2.jpeg";
+import photo3 from "../assets/photo3.jpeg";
 import { Link } from "react-router-dom";
 import { TitleComponent } from "./title";
 import { register } from "swiper/element/bundle";
@@ -30,22 +30,22 @@ export const Hero = () => {
       >
         <SwiperSlide>
           <div
-            className="w-full h-full lg:bg-center bg-cover"
+            className="w-full h-full  bg-cover"
             style={{ backgroundImage: `url(${photo1})` }}
           ></div>
         </SwiperSlide>
         <SwiperSlide>
           <div
-            className="w-full h-full bg-center bg-cover"
+            className="w-full h-full  bg-cover"
             style={{ backgroundImage: `url(${photo2})` }}
           ></div>
         </SwiperSlide>
-        <SwiperSlide>
+        {/* <SwiperSlide>
           <div
-            className="w-full h-full bg-center bg-cover"
+            className="w-full h-full  bg-cover"
             style={{ backgroundImage: `url(${photo3})` }}
           ></div>
-        </SwiperSlide>
+        </SwiperSlide> */}
       </Swiper>
 
       <div className="absolute w-full sm:w-4/5 h-full sm:h-3/4 bg-black bg-opacity-75 p-6 sm:p-12 lg:p-24 flex flex-col justify-center items-start space-y-6 sm:space-y-10 text-white z-10">
