@@ -1,10 +1,15 @@
 import { useState } from "react";
 import { AdminNavbar } from "../navbar/adm-navbar";
+import { api } from "../../api";
 
 export const AddAdminAndContactForm = () => {
   const [admin, setAdmin] = useState({ name: "", password: "" });
   const [contact, setContact] = useState({ email: "", phone: "", address: "" });
 
+  const [adminMessage, setAdminMessage] = useState(""); // Mensagem de sucesso ou erro para Admin
+  const [contactMessage, setContactMessage] = useState(""); // Mensagem de sucesso ou erro para Contato
+
+  // Funções de alteração de estado para admin e contact
   const handleAdminInputChange = (e) => {
     setAdmin({ ...admin, [e.target.name]: e.target.value });
   };
@@ -13,16 +18,50 @@ export const AddAdminAndContactForm = () => {
     setContact({ ...contact, [e.target.name]: e.target.value });
   };
 
-  const handleAdminSubmit = (e) => {
+  // Função para enviar os dados do administrador para a API
+  const handleAdminSubmit = async (e) => {
     e.preventDefault();
-    console.log("Novo administrador:", admin);
-    // Lógica para salvar os dados do administrador aqui
+
+    // Validação simples para garantir que os campos não estejam vazios
+    if (!admin.name || !admin.password) {
+      setAdminMessage("Por favor, preencha todos os campos.");
+      return;
+    }
+
+    try {
+      const response = await api.post("/user/register", admin); // Altere a URL para o endpoint correto
+      console.log("Novo administrador salvo:", response.data);
+
+      // Limpar formulário após sucesso
+      setAdmin({ name: "", password: "" });
+      setAdminMessage("Administrador adicionado com sucesso!");
+    } catch (error) {
+      console.error("Erro ao salvar administrador:", error);
+      setAdminMessage("Erro ao adicionar administrador.");
+    }
   };
 
-  const handleContactSubmit = (e) => {
+  // Função para enviar os dados do contato para a API
+  const handleContactSubmit = async (e) => {
     e.preventDefault();
-    console.log("Novo contato:", contact);
-    // Lógica para salvar os dados do contato aqui
+
+    // Validação simples para garantir que os campos não estejam vazios
+    if (!contact.email || !contact.phone || !contact.address) {
+      setContactMessage("Por favor, preencha todos os campos.");
+      return;
+    }
+
+    try {
+      const response = await api.post("/contact/insert", contact); // Altere a URL para o endpoint correto
+      console.log("Novo contato salvo:", response.data);
+
+      // Limpar formulário após sucesso
+      setContact({ email: "", phone: "", address: "" });
+      setContactMessage("Contato adicionado com sucesso!");
+    } catch (error) {
+      console.error("Erro ao salvar contato:", error);
+      setContactMessage("Erro ao adicionar contato.");
+    }
   };
 
   return (
@@ -67,6 +106,19 @@ export const AddAdminAndContactForm = () => {
               />
             </div>
           </div>
+
+          {/* Exibir mensagem de sucesso ou erro */}
+          {adminMessage && (
+            <p
+              className={`text-sm mt-2 ${
+                adminMessage.includes("sucesso")
+                  ? "text-green-600"
+                  : "text-red-600"
+              }`}
+            >
+              {adminMessage}
+            </p>
+          )}
 
           <button
             type="submit"
@@ -128,6 +180,19 @@ export const AddAdminAndContactForm = () => {
               />
             </div>
           </div>
+
+          {/* Exibir mensagem de sucesso ou erro */}
+          {contactMessage && (
+            <p
+              className={`text-sm mt-2 ${
+                contactMessage.includes("sucesso")
+                  ? "text-green-600"
+                  : "text-red-600"
+              }`}
+            >
+              {contactMessage}
+            </p>
+          )}
 
           <button
             type="submit"

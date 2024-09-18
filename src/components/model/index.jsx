@@ -1,14 +1,40 @@
 import { useState } from "react";
+import { api } from "../../api";
 
 export const EditProfileModal = ({ isOpen, onClose, user, onSave }) => {
   const [name, setName] = useState(user.name);
   const [password, setPassword] = useState("");
   const [description, setDescription] = useState(user.description);
   const [profilePicture, setProfilePicture] = useState(null);
+  const [isSaving, setIsSaving] = useState(false);
 
-  const handleSave = () => {
-    onSave({ name, password, description, profilePicture });
-    onClose();
+  const handleSave = async () => {
+    setIsSaving(true);
+
+    const formData = new FormData();
+    formData.append("name", name);
+    formData.append("password", password);
+    formData.append("description", description);
+
+    if (profilePicture) {
+      formData.append("profilePicture", profilePicture);
+    }
+
+    try {
+      const response = await api.put(`/user/update/${user.id}`, formData, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      });
+
+      console.log("Perfil atualizado com sucesso:", response.data);
+      onSave({ name, password, description, profilePicture });
+    } catch (error) {
+      console.error("Erro ao atualizar o perfil:", error);
+    } finally {
+      setIsSaving(false);
+      onClose();
+    }
   };
 
   if (!isOpen) return null;
@@ -41,20 +67,21 @@ export const EditProfileModal = ({ isOpen, onClose, user, onSave }) => {
           type="file"
           onChange={(e) => setProfilePicture(e.target.files[0])}
           className="w-full px-4 py-2 border border-gray-300 rounded-md"
-          placeholder="Escolher Imagem"
         />
         <div className="flex justify-end space-x-2">
           <button
             onClick={onClose}
             className="py-2 px-4 bg-gray-500 text-white rounded-md"
+            disabled={isSaving}
           >
             Cancelar
           </button>
           <button
             onClick={handleSave}
             className="py-2 px-4 bg-blue-600 text-white rounded-md"
+            disabled={isSaving}
           >
-            Salvar
+            {isSaving ? "Salvando..." : "Salvar"}
           </button>
         </div>
       </div>

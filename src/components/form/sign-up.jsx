@@ -2,6 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import { AdminNavbar } from "../navbar/adm-navbar";
 import { Link } from "react-router-dom";
+import { api } from "../../api";
 
 export const AddTeamMemberForm = () => {
   const [member, setMember] = useState({
@@ -38,6 +39,7 @@ export const AddTeamMemberForm = () => {
     formData.append("upload_preset", "shanks");
 
     try {
+      // Upload da imagem para o Cloudinary
       const cloudinaryResponse = await axios.post(
         "https://api.cloudinary.com/v1_1/dumx0ucdq/image/upload",
         formData
@@ -46,13 +48,20 @@ export const AddTeamMemberForm = () => {
       const uploadedImageUrl = cloudinaryResponse.data.secure_url;
       setImageUrl(uploadedImageUrl);
 
+      // Dados do membro para enviar ao backend
       const memberData = {
         name: member.name,
         info: member.info,
         imageUrl: uploadedImageUrl,
       };
 
-      console.log("Membro salvo com sucesso:", memberData);
+      // Fazendo o POST para a API backend
+      const apiResponse = await api.post(
+        "/user/register", // Coloque aqui o endpoint da sua API
+        memberData
+      );
+
+      console.log("Membro salvo com sucesso:", apiResponse.data);
     } catch (error) {
       console.error("Erro ao salvar membro:", error);
     } finally {

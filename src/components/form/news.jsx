@@ -2,6 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import { AdminNavbar } from "../navbar/adm-navbar";
 import { Link } from "react-router-dom";
+import { api } from "../../api";
 
 export const AddNewsForm = () => {
   const [news, setNews] = useState({
@@ -12,6 +13,7 @@ export const AddNewsForm = () => {
   });
   const [isUploading, setIsUploading] = useState(false);
   const [imageUrl, setImageUrl] = useState("");
+  const [message, setMessage] = useState(""); // Mensagem de sucesso ou erro
 
   const handleInputChange = (e, lang, field) => {
     if (field === "file") {
@@ -38,9 +40,10 @@ export const AddNewsForm = () => {
 
     const formData = new FormData();
     formData.append("file", news.file);
-    formData.append("upload_preset", "shanks");
+    formData.append("upload_preset", "shanks"); // Substituir pelo preset correto
 
     try {
+      // Upload da imagem para o Cloudinary
       const cloudinaryResponse = await axios.post(
         "https://api.cloudinary.com/v1_1/dumx0ucdq/image/upload",
         formData
@@ -56,9 +59,23 @@ export const AddNewsForm = () => {
         imageUrl: uploadedImageUrl,
       };
 
-      console.log("Notícia salva com sucesso:", newsData);
+      // Envio dos dados da notícia para a API
+      const response = await api.post("/news/insert", newsData); // Substitua pela URL correta
+      console.log("Notícia salva com sucesso:", response.data);
+
+      setMessage("Notícia adicionada com sucesso!");
+
+      // Limpar o formulário
+      setNews({
+        title: { pt: "", en: "" },
+        content: { pt: "", en: "" },
+        type: "",
+        file: null,
+      });
+      setImageUrl("");
     } catch (error) {
       console.error("Erro ao salvar notícia:", error);
+      setMessage("Erro ao adicionar notícia.");
     } finally {
       setIsUploading(false);
     }
@@ -172,6 +189,17 @@ export const AddNewsForm = () => {
             Salvar
           </button>
         )}
+
+        {message && (
+          <p
+            className={`mt-4 text-sm ${
+              message.includes("sucesso") ? "text-green-600" : "text-red-600"
+            }`}
+          >
+            {message}
+          </p>
+        )}
+
         <div className="w-full mt-4 text-center bg-blue-600 text-white py-2 rounded-lg">
           <Link to="/admin/news">Ver Notícias</Link>
         </div>

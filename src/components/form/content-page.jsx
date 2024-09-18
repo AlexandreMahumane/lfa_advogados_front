@@ -1,5 +1,7 @@
 import { useState } from "react";
+import axios from "axios";
 import { AdminNavbar } from "../navbar/adm-navbar";
+import { api } from "../../api";
 
 export const ManageContentForm = () => {
   const [content, setContent] = useState({
@@ -11,6 +13,8 @@ export const ManageContentForm = () => {
     junteSeANos: { pt: "", en: "" },
   });
 
+  const [isSaving, setIsSaving] = useState(false);
+
   const handleInputChange = (e, lang, field) => {
     setContent({
       ...content,
@@ -18,8 +22,22 @@ export const ManageContentForm = () => {
     });
   };
 
-  const handleSave = (field) => {
-    console.log(`Conteúdo salvo para ${field}:`, content[field]);
+  const handleSave = async (field) => {
+    setIsSaving(true);
+
+    try {
+      const dataToSend = {
+        [field]: content[field],
+      };
+
+      const response = await api.post("/content/update", dataToSend);
+
+      console.log(`Conteúdo salvo com sucesso para ${field}:`, response.data);
+    } catch (error) {
+      console.error(`Erro ao salvar o conteúdo para ${field}:`, error);
+    } finally {
+      setIsSaving(false);
+    }
   };
 
   return (
@@ -60,8 +78,9 @@ export const ManageContentForm = () => {
               type="button"
               onClick={() => handleSave(field)}
               className="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700"
+              disabled={isSaving}
             >
-              Salvar {label}
+              {isSaving ? "Salvando..." : `Salvar ${label}`}
             </button>
           </div>
         ))}
