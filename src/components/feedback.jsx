@@ -1,25 +1,41 @@
 import { useState } from "react";
+import axios from "axios";
 import { TitleComponent } from "./title";
+import { api } from "../api";
 
 export const FeedbackComponent = () => {
   const [feedbacks, setFeedbacks] = useState([]);
   const [name, setName] = useState("");
   const [comment, setComment] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (name && comment) {
+      setIsSubmitting(true);
+
       const newFeedback = {
-        id: feedbacks.length + 1,
         name,
         comment,
-        date: new Date().toLocaleDateString(),
+        // date: new Date().toLocaleDateString(),
       };
 
-      setFeedbacks([newFeedback, ...feedbacks]);
-      setName("");
-      setComment("");
+      try {
+        // Fazendo a requisição POST para enviar o feedback
+        const response = await api.post("/feedback/insert", newFeedback);
+
+        // Adiciona o feedback retornado pelo servidor à lista de feedbacks
+        setFeedbacks([response.data, ...feedbacks]);
+
+        // Limpa os campos de entrada após o envio
+        setName("");
+        setComment("");
+      } catch (error) {
+        console.error("Erro ao enviar feedback:", error);
+      } finally {
+        setIsSubmitting(false);
+      }
     }
   };
 
@@ -38,6 +54,7 @@ export const FeedbackComponent = () => {
             value={name}
             onChange={(e) => setName(e.target.value)}
             required
+            disabled={isSubmitting}
           />
         </div>
 
@@ -51,14 +68,16 @@ export const FeedbackComponent = () => {
             value={comment}
             onChange={(e) => setComment(e.target.value)}
             required
+            disabled={isSubmitting}
           />
         </div>
 
         <button
           type="submit"
           className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-500"
+          disabled={isSubmitting}
         >
-          Enviar Feedback
+          {isSubmitting ? "Enviando..." : "Enviar Feedback"}
         </button>
       </form>
 
