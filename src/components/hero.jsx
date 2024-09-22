@@ -78,7 +78,7 @@ export const Hero = () => {
           className="w-full flex space-x-4 text-center sm:w-auto mt-4"
         >
           <Link
-            to={`information/${t("hero.link")}`}
+            to={`information/about-us`}
             className="w-fit px-4 py-2 bg-blue-600 hover:bg-transparent text-white border-2 border-blue-600 transition-all"
           >
             {t("link.text")}

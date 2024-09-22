@@ -4,6 +4,8 @@ import photo from "../assets/photo6.jpeg";
 import React from "react";
 import "../i18n/i18n";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
+import { LinkComponent } from "./link-component";
 export const Skills = () => {
   const { t } = useTranslation();
   return (
@@ -30,6 +32,7 @@ export const Skills = () => {
           />
         </div>
       </div>
+      <LinkComponent path={"skills"} />
     </section>
   );
 };

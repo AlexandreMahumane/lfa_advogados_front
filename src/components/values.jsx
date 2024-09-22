@@ -18,7 +18,7 @@ export const Values = () => {
       >
         {t("values.text")}
       </motion.p>
-      <LinkComponent path={t("values.link")} />
+      <LinkComponent path={"values"} />
     </section>
   );
 };

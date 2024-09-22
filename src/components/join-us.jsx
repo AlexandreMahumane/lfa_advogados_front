@@ -9,7 +9,7 @@ export const JoinUs = () => {
   return (
     <section className="w-full space-y-6 flex flex-col ">
       <div className="text-start w-full">
-        <TitleComponent text={t("joinUs.title")} />
+        <TitleComponent text={t("whyLfa.title")} />
       </div>
 
       <motion.div
@@ -19,14 +19,10 @@ export const JoinUs = () => {
         viewport={{ once: true }}
         className="space-y-6 pl-px-4"
       >
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam fugiat
-          laboriosam et assumenda veritatis debitis, odit incidunt, dolore
-          molestias provident expedita, sed doloremque quibusdam quam cumque ab
-          accusantium? Quisquam, ad?
-        </p>
+        <h2 className="text-2xl">{t(`whyLfa.value1`)}</h2>
+        <p className="text-lg">{t(`whyLfa.text1`)}</p>
       </motion.div>
-      <LinkComponent path={t("joinUs.link")} />
+      <LinkComponent path={"why-lfa"} />
 
       <div className="mt-10">
         <iframe

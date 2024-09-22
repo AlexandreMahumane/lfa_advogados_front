@@ -14,7 +14,7 @@ export const News = () => {
   return (
     <>
       <Navbar />
-      <section className="px-3 max-w-7xl mx-auto py-8 mt-16 lg:mt-6 w-full sm:px-8 sm:py-12 lg:px-16 lg:py-20 bg-gray-50 text-gray-800">
+      <section className="px-3 min-h-screen max-w-7xl mx-auto py-8 mt-16 lg:mt-6 w-full sm:px-8 sm:py-12 lg:px-16 lg:py-20 bg-gray-50 text-gray-800">
         <h2 className="text-2xl font-bold sm:text-3xl lg:text-4xl">
           {t(`article.news.title`)}
         </h2>
