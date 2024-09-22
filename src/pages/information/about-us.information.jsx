@@ -13,7 +13,7 @@ export const AboutUsInformation = () => {
         <TitleComponent text={t(`hero.title`)} />
         <div className="space-y-6 mt-4 text-base sm:text-lg lg:text-xl leading-relaxed">
           <div>
-            <p className="text-2xl">{t(`hero.text`)}</p>
+            <p className="text-2xl">LFA {t(`hero.text`)}</p>
             <p className="text-lg">{t(`hero.text2`)}</p>
           </div>
           <div>
