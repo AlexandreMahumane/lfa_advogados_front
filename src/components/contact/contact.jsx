@@ -25,10 +25,10 @@ export const Contact = () => {
           geral@lfaadvogados.co.mz
         </a>
         <a
-          href="tel:+258847499116"
+          href="tel:+258847499115"
           className="block text-blue-600 underline mt-2"
         >
-          (+258) 84 749 9116
+          (+258) 84 749 9115
         </a>
       </div>
       <ContactForm />
