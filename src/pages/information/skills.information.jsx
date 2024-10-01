@@ -1,64 +1,45 @@
+import { useState } from "react";
 import "../../i18n/i18n";
 import { useTranslation } from "react-i18next";
 import { TitleComponent } from "../../components/title";
 import { Navbar } from "../../components/navbar/navbar";
 import { Footer } from "../../components/footer";
+
 export const SkillsInformation = () => {
   const { t } = useTranslation();
+  const [visibleIndex, setVisibleIndex] = useState(null);
+
+  const toggleTextVisibility = (index) => {
+    setVisibleIndex(visibleIndex === index ? null : index);
+  };
+
+  const skills = [
+    { title: t(`skills.area1.title`), text: t(`skills.area1.description`) },
+    { title: t(`skills.area2.title`), text: t(`skills.area2.description`) },
+    { title: t(`skills.area3.title`), text: t(`skills.area3.description`) },
+    { title: t(`skills.area4.title`), text: t(`skills.area4.description`) },
+  ];
 
   return (
     <>
       <Navbar />
-      <section className="min-h-screen px-4 py-8 mt-16 lg:mt-6 sm:px-8 sm:py-12 lg:px-16 lg:py-20 bg-gray-50 text-gray-800">
-        <TitleComponent text={t(`skills.title`)} />
-        <div className="space-y-6 mt-4 text-base sm:text-lg lg:text-xl leading-relaxed">
-          <div>
-            <p className="text-2xl">{t(`skills.text`)}</p>
-            <p className="text-lg">{t(`skills.text1`)}</p>
-          </div>
-          <div>
-            <h2 className="text-2xl">{t(`skills.area1.title`)}</h2>
-            <p className="text-lg">{t(`skills.area1.description`)}</p>
-          </div>
-          <div>
-            <h2 className="text-2xl">{t(`skills.area2.title`)}</h2>
-            <p className="text-lg">{t(`skills.area2.description`)}</p>
-          </div>
-          <div>
-            <h2 className="text-2xl">{t(`skills.area3.title`)}</h2>
-            <p className="text-lg">{t(`skills.area3.description`)}</p>
-          </div>
-          <div>
-            <h2 className="text-2xl">{t(`skills.area4.title`)}</h2>
-            <p className="text-lg">{t(`skills.area4.description`)}</p>
-          </div>
-          <div>
-            <h2 className="text-2xl">{t(`skills.area5.title`)}</h2>
-            <p className="text-lg">{t(`skills.area5.description`)}</p>
-          </div>
-          <div>
-            <h2 className="text-2xl">{t(`skills.area6.title`)}</h2>
-            <p className="text-lg">{t(`skills.area6.description`)}</p>
-          </div>
-          <div>
-            <h2 className="text-2xl">{t(`skills.area7.title`)}</h2>
-            <p className="text-lg">{t(`skills.area7.description`)}</p>
-          </div>
-          <div>
-            <h2 className="text-2xl">{t(`skills.area8.title`)}</h2>
-            <p className="text-lg">{t(`skills.area8.description`)}</p>
-          </div>
-          <div>
-            <h2 className="text-2xl">{t(`skills.area9.title`)}</h2>
-            <p className="text-lg">{t(`skills.area9.description`)}</p>
-          </div>
-          <div>
-            <h2 className="text-2xl">{t(`skills.area10.title`)}</h2>
-            <p className="text-lg">{t(`skills.area10.description`)}</p>
-          </div>
-          <div>
-            <h2 className="text-2xl">{t(`skills.area11.title`)}</h2>
-            <p className="text-lg">{t(`skills.area11.description`)}</p>
+      <section className="min-h-screen flex justify-center items-center bg-gray-50 text-gray-800">
+        <div className="bg-white  p-8 max-w-4xl w-full">
+          <TitleComponent text={t(`skills.title`)} />
+          <div className="space-y-6 mt-4 text-base sm:text-lg lg:text-xl leading-relaxed">
+            {skills.map((skill, index) => (
+              <div key={index}>
+                <h2
+                  onClick={() => toggleTextVisibility(index)}
+                  className="text-2xl cursor-pointer hover:text-blue-600 transition duration-300"
+                >
+                  {skill.title}
+                </h2>
+                {visibleIndex === index && (
+                  <p className="text-lg mt-2">{skill.text}</p>
+                )}
+              </div>
+            ))}
           </div>
         </div>
       </section>

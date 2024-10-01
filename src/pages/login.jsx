@@ -7,7 +7,7 @@ export const Login = ({ onLogin }) => {
   const handleLogin = (e) => {
     e.preventDefault();
     if (username && password) {
-      onLogin(); // Função para validar e autenticar o login
+      onLogin();
     }
   };
 

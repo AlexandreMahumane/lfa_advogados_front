@@ -41,7 +41,7 @@ export const routes = createBrowserRouter([
     element: <News />,
   },
   {
-    path: "information/member/",
+    path: "information/member/:id",
     element: <Member />,
   },
   {

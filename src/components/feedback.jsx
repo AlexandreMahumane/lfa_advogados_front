@@ -22,13 +22,10 @@ export const FeedbackComponent = () => {
       };
 
       try {
-        // Fazendo a requisição POST para enviar o feedback
         const response = await api.post("/feedback/insert", newFeedback);
 
-        // Adiciona o feedback retornado pelo servidor à lista de feedbacks
         setFeedbacks([response.data, ...feedbacks]);
 
-        // Limpa os campos de entrada após o envio
         setName("");
         setComment("");
       } catch (error) {
