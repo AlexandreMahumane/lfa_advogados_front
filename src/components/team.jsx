@@ -56,7 +56,7 @@ export const Team = () => {
         </motion.p>
       </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mt-8">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
         {teamMembers.map((member, index) => (
           <div
             key={index}
@@ -66,7 +66,7 @@ export const Team = () => {
               <img
                 src={member.photo}
                 alt={member.name}
-                className="w-32 h-32 object-cover rounded-lg shadow-lg transition-opacity duration-300 group-hover:opacity-70"
+                className="md:w-32 md:h-32 w-72 h-64 object-fill rounded-lg shadow-lg transition-opacity duration-300 group-hover:opacity-70"
               />
 
               <div className="absolute inset-0 flex-col flex  px-3 justify-end bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">

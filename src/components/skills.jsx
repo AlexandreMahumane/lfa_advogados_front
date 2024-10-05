@@ -28,7 +28,7 @@ export const Skills = () => {
           <img
             src={photo}
             alt="Advogado em ação"
-            className="w-64 h-64 object-cover rounded-lg shadow-md"
+            className=" h-64 object-fill rounded-lg shadow-md"
           />
         </div>
       </div>

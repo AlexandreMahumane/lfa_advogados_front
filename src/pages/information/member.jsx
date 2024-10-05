@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "../../i18n/i18n";
 import photo from "../../assets/hero.jpg";
 import { useTranslation } from "react-i18next";
 import { useParams, Link } from "react-router-dom";
+import { TitleComponent } from "../../components/title";
 import { Footer } from "../../components/footer";
 import { Navbar } from "../../components/navbar/navbar";
 
@@ -27,57 +28,47 @@ export const Member = () => {
       photo: photo,
     },
   ];
-
-  const [currentMember, setCurrentMember] = useState(null);
-  const [navigationMembers, setNavigationMembers] = useState([]);
-
-  useEffect(() => {
-    const selectedMember = teamMembers.find((member) => member.id === section);
-    setCurrentMember(selectedMember);
-
-    const remainingMembers = teamMembers.filter(
-      (member) => member.id !== section
-    );
-    setNavigationMembers(remainingMembers);
-  }, [section]);
+  const filteredMembers = teamMembers.filter(
+    (_, index) => index !== parseInt(section)
+  );
 
   return (
     <>
       <Navbar />
-      <section className="px-3 min-h-screen max-w-7xl mx-auto py-8 mt-16 lg:mt-6 w-full sm:px-8 sm:py-12 lg:px-16 lg:py-20 bg-gray-50 text-gray-800">
-        <div className="mt-4 space-y-4 text-base sm:text-lg lg:text-xl leading-relaxed">
-          <div className="w-full flex justify-center">
-            <div className="w-full h-auto max-w-full lg:w-96 lg:h-80">
-              <img
-                src={currentMember?.photo}
-                alt={currentMember?.name}
-                className="object-cover w-full h-full"
-              />
-            </div>
+      <section className="px-3 min-h-screen max-w-7xl mx-auto py-8 mt-16 lg:mt-24 w-full sm:px-8 sm:py-12 lg:px-16 lg:py-20 bg-gray-50 text-gray-800">
+        <div className="flex flex-col lg:flex-row items-center lg:items-start space-y-6 lg:space-y-0 lg:space-x-8 text-base sm:text-lg lg:text-xl leading-relaxed">
+          <div className="w-full lg:w-1/2 max-w-lg lg:max-w-none h-auto">
+            <img
+              src={photo}
+              alt="News"
+              className="object-cover w-full h-full rounded-lg shadow-lg"
+            />
           </div>
-          <h2 className="text-2xl text-center font-bold sm:text-3xl lg:text-4xl">
-            {t(`article.news.title`)}
-          </h2>
-          <div className="flex flex-wrap w-full">
+          <div className="w-full lg:w-1/2 space-y-4 text-center lg:text-left">
+            <h2 className="text-2xl font-bold sm:text-3xl lg:text-4xl">
+              {t(`article.news.title`)}
+            </h2>
             <p>{t(`article.news.text`)}</p>
           </div>
         </div>
-      </section>
 
-      <nav className="py-8 bg-gray-100">
-        <div className="max-w-7xl mx-auto flex justify-center space-x-4">
-          {navigationMembers.map((member) => (
-            <Link
-              key={member.id}
-              to={`/information/member/${member.id}`}
-              className="text-blue-600 hover:text-blue-800 font-semibold transition duration-300"
-            >
-              {member.name}
-            </Link>
-          ))}
+        <div className="mt-12">
+          <h3 className="text-xl text-center font-semibold mb-6">
+            Navegue pelos nossos advogados
+          </h3>
+          <div className="flex justify-center gap-4 flex-wrap">
+            {filteredMembers.map((member, index) => (
+              <Link to={`/information/member/${index}`} key={index}>
+                <img
+                  src={member.photo}
+                  alt={member.name}
+                  className="w-20 h-20 object-cover rounded-lg shadow-md transition-transform transform hover:scale-105"
+                />
+              </Link>
+            ))}
+          </div>
         </div>
-      </nav>
-
+      </section>
       <Footer />
     </>
   );

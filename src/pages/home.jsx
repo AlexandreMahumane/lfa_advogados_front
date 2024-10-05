@@ -19,8 +19,8 @@ export const Home = () => {
           <Values />
           <Article />
           <Team />
+          <Skills />
         </div>
-        <Skills />
 
         <div className="max-w-7xl mb-10 space-y-16 mx-auto px-4 sm:px-8 lg:px-12">
           <JoinUs />

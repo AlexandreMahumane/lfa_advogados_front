@@ -19,16 +19,34 @@ export const Contact = () => {
       <div>
         <h3 className="font-bold text-lg">{t("contacts.title")}</h3>
         <a
-          href="mailto:info@lfaadvogados.co.mz"
+          href="mailto:info@lfadvogados.co.mz"
           className="block text-blue-600 underline mt-2"
         >
-          geral@lfaadvogados.co.mz
+          geral@lfadvogados.co.mz
         </a>
         <a
           href="tel:+258847499115"
           className="block text-blue-600 underline mt-2"
         >
           (+258) 84 749 9115
+        </a>
+        <a
+          href="tel:+258847499116"
+          className="block text-blue-600 underline mt-2"
+        >
+          (+258) 84 749 9116
+        </a>
+        <a
+          href="tel:+258824170990"
+          className="block text-blue-600 underline mt-2"
+        >
+          (+258) 82 417 0990
+        </a>
+        <a
+          href="tel:+258847893310"
+          className="block text-blue-600 underline mt-2"
+        >
+          (+258) 84 789 3310
         </a>
       </div>
       <ContactForm />
